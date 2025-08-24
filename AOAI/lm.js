@@ -1,4 +1,7 @@
 //ライブラリの参照
+
+//[REPLACE:use_EntraID_authentication]
+
 const { AzureOpenAI } = require('openai');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -62,6 +65,7 @@ async function sendMessage(message, imageUrls) {
     try {
         const deployment = settings.deploymentName;
         const apiVersion = settings.apiVersion;
+        //Azure OpenAI クライアントの初期化 (API キーを使用した認証)
         const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment });
         const result = await client.chat.completions.create(body);
         for (const choice of result.choices) {

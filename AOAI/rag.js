@@ -1,3 +1,5 @@
+//[REPLACE:use_EntraID_authentication]
+
 const { AzureOpenAI } = require('openai');
 const { SearchClient, AzureKeyCredential } = require('@azure/search-documents');
 
@@ -21,7 +23,7 @@ let isAvailable = search_endpoint && search_apiKey ? true : false;
 
 //テキストをベクトルデータに変換する関数
 async function getEmbedding(text) {
-    //埋め込みモデルのクライアントを作成
+    //埋め込みモデルのクライアントを作成 (API キーを使用した認証)
     const embeddingClient = new AzureOpenAI({ embedding_endpoint, embedding_apiKey, apiVersion, deployment: embedding_deployment });
     const embeddings = await embeddingClient.embeddings.create({ input: text, model: '' });
     return embeddings.data[0].embedding;

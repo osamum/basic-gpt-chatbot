@@ -1,3 +1,5 @@
+//[REPLACE:use_EntraID_authentication]
+
 const { AzureOpenAI } = require('openai');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -19,6 +21,7 @@ async function ganarateImage(prompt) {
     const n = 1; //生成する画像の枚数　dall-e-3 は 1 枚のみ
 
     try {
+        //Azure OpenAI クライアントの初期化 (API キーを使用した認証)
         const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment: deploymentName });
         const results = await client.images.generate({
             prompt,

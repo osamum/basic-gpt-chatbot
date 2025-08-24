@@ -1,4 +1,5 @@
 
+//[REPLACE:use_keyVault]
 const rag = require('./AOAI/rag.js');
 const lm = require('./AOAI/lm.js');
 const webSearch = require('./AOAI/webSearch.js')
