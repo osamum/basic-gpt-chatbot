@@ -1,5 +1,9 @@
 
 //[REPLACE:use_keyVault]
+//Azure KeyVault からシークレットを取得して環境変数に設定(EntraID 使用の際は削除)
+const keyManager = require('./keymgr.js');
+keyManager.setSecretEnv();
+//---
 const rag = require('./AOAI/rag.js');
 const lm = require('./AOAI/lm.js');
 const webSearch = require('./AOAI/webSearch.js')
