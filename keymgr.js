@@ -28,6 +28,7 @@ const { DefaultAzureCredential } = require('@azure/identity');
     async function setSecretEnv() {
         process.env.AZURE_OPENAI_API_KEY = await getSecret(llmSecretName);
         process.env.SEARCH_API_KEY = await getSecret(SearchSecretName);
+        console.log('Set secrets to Environment Variables');
     }
 
     //他のファイルから呼び出せるようにエクスポート
