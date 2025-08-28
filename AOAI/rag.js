@@ -13,9 +13,6 @@ const embedding_apiKey = process.env['EMBEDDING_API_KEY'] || process.env['AZURE_
 const search_endpoint = process.env['SEARCH_ENDPOINT'];
 const search_apiKey = process.env['SEARCH_API_KEY'];
 
-//console.log('SEARCH_API_KEY:' + search_apiKey);
-
-
 //インデックス名その他の設定値を取得
 const settings = JSON.parse(process.env['SEARCH_SETTINGS']);
 const embedding_settings = JSON.parse(process.env['EMBEDDING_SETTINGS']);
