@@ -43,7 +43,7 @@
 1. [Azure ポータルから Open AI リソースを作成する](https://github.com/osamum/AOAI-first-step-for-Developer/blob/main/Ex01-1.md)
 2. [言語モデル gpt-4o-mini のデプロイ](https://github.com/osamum/AOAI-first-step-for-Developer)
 3. [埋め込みモデル : text-embedding-ada-002 のデプロイ](https://github.com/osamum/AOAI-first-step-for-Developer/blob/main/Ex01-3.md)
-4. [画像生成モデル : dall-e-3 のデプロイ](https://github.com/osamum/AOAI-first-step-for-Developer/blob/main/Ex01-4.md)
+4. ~~[画像生成モデル : dall-e-3 のデプロイ](https://github.com/osamum/AOAI-first-step-for-Developer/blob/main/Ex01-4.md)~~
 
     RAG 用に Azure AI Search インスタンスを新規に作成し、データを追加してベクトル インデックスを作成する場合は、以下のドキュメントの内容に従い作業してください。
 
